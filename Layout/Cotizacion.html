@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/Cotizador.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Cotizador</title>
+</head>
+<body>
+    <div class="container mx-auto">
+        <div id="contenido" class="pb-10">
+              <header class="bg-teal-500 text-white py-3 font-bold uppercase">
+                  <h1 class="text-center">Cotiza tus productos</h1>
+              </header>
+                  <form class="mt-10 max-w-lg mx-auto" action="#" id="cotizar-seguro">
+                          <div class="flex items-center mb-5">
+                              <label 
+                                class="font-bold  uppercase mr-2 w-20"
+                                for="marca"
+                              >Producto:</label>
+                              <select class="flex-1 bg-gray-100 p-3 appearance-none" id="marca">
+                                  <option value="">- Seleccionar -</option>
+                                  <option value="1">Esmaltes</option>
+                                  <option value="2">Decoraciones</option>
+                                  <option value="3">Herramientas</option>
+                              </select>
+                          </div>
+                          <div class="three columns">
+                            <label for="minimo">Precio Min</label>
+                            <select class="u-full-width" id="minimo">
+                                    <option value="">Seleccione</option>
+                                    <option value="20000">20,000</option>
+                                    <option value="30000">30,000</option>
+                                    <option value="40000">40,000</option>
+                                    <option value="50000">50,000</option>
+                                    <option value="60000">60,000</option>
+                                    <option value="70000">70,000</option>
+                                    <option value="80000">80,000</option>
+                                    <option value="90000">90,000</option>
+                            </select>
+                        </div>
+                        <div class="three columns">
+                            <label for="maximo">Precio Max</label>
+                            <select class="u-full-width" id="maximo">
+                                    <option value="">Seleccione</option>
+                                    <option value="20000">20,000</option>
+                                    <option value="30000">30,000</option>
+                                    <option value="40000">40,000</option>
+                                    <option value="50000">50,000</option>
+                                    <option value="60000">60,000</option>
+                                    <option value="70000">70,000</option>
+                                    <option value="80000">80,000</option>
+                                    <option value="90000">90,000</option>
+                            </select>
+                          <fieldset>
+                                <legend  class="font-bold  uppercase text-2xl text-center w-full">Tipo Producto</legend>
+  
+                                <div class="flex justify-around mt-5">
+                                    <div>
+                                        <label class="font-bold  uppercase mr-2">Full Kit</label>
+                                            <input type="radio" name="tipo" value="basico" checked>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="font-bold  uppercase mr-2">Basico</label>
+                                            <input type="radio" name="tipo" value="completo">
+                                        </label>
+                                    </div>
+                                </div>
+                        </fieldset>
+                    <div id="resultado"></div>
+                    <div class="flex  justify-center py-4">
+                        <button 
+                          type="submit" 
+                          class="mx-auto bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-20 rounded"
+                          >Cotizar Seguro
+                      </button>
+                    </div>
+   
+                  </form> 
+        </div> <!--#contenido-->
+  </div>
+</body>
+</html>
