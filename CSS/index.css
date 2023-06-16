@@ -3,6 +3,10 @@
     justify-content: space-between;
     align-items: center;
     background-color: #e6e6e6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
   }
 
   .ButtonInicio{
@@ -165,6 +169,7 @@
 
   #hero {
     background-image: url(../Images/hero.jpg);
+    padding-top: 45%;
     height: 560px;
     background-size: cover;
     background-position: center;
@@ -195,4 +200,6 @@
       display: none;
     }
   }
+
+
   
