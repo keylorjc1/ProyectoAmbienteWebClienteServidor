@@ -1,0 +1,205 @@
+.fullNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .ButtonInicio{
+    color: #ec86b1;
+    text-decoration: none;
+  }
+
+  .navbar-brand{
+    padding-right: 50%;
+  }
+
+  .shopCart{
+    padding-right: 20px;
+  }
+
+.custom-btn {
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+    z-index: 2;
+  }
+  
+  .custom-btn.click {
+    left: 260px;
+  }
+  
+  .custom-btn span {
+    color: #ec86b1;
+    font-size: 25px;
+    line-height: 45px;
+  }
+  
+  .custom-btn.click span:before {
+    content: '\f00d';
+  }
+  
+  .sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    top: 109px;
+    background: #1b1b1b;
+    transition: left 0.4s ease;
+    z-index: 1;
+  }
+  
+  .sidebar.show {
+    left: 0px;
+  }
+  
+  .sidebar .text {
+    color:  #ec86b1;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    background:   #f6f0f4;
+    letter-spacing: 1px;
+  }
+  
+  nav ul {
+    background:   #f6f0f4;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    padding-top: 65px;
+  }
+  
+  nav ul li {
+    line-height: 40px;
+  }
+  
+  nav ul li a {
+    position: relative;
+    color: #ec86b1;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+  }
+  
+  nav ul li.active a {
+    color: white;
+    background:#dfbfd3;
+    border-left-color: #9268a8;
+  }
+  
+  nav ul li a:hover {
+    background: #dfbfd3;
+  }
+  
+  nav ul ul {
+    position: static;
+    display: none;
+  }
+  
+  nav ul .feat-show.show {
+    display: block;
+  }
+  
+  nav ul .serv-show.show1 {
+    display: block;
+  }
+  
+  nav ul ul li {
+    line-height: 42px;
+    border-top: none;
+  }
+  
+  nav ul ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+  }
+  
+  nav ul li.active ul li a {
+    color: #e6e6e6;
+    background: #1b1b1b;
+    border-left-color: transparent;
+  }
+  
+  nav ul li a span {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.4s;
+  }
+  
+  nav ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+  
+  .content {
+    margin-left: 270px;
+    padding: 20px;
+  }
+  
+  .content .header {
+    font-size: 45px;
+    font-weight: 600;
+  }
+  
+  .content p {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+
+
+  /*#hero {
+    background-image: url(../Images/hero.jpg);
+    padding-top: 45%;
+    height: 560px;
+    background-size: cover;
+    background-position: center;
+  }*/
+
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border:none;
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+    .ButtonInicio span {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 390px) and (max-height: 844px) {
+    .ButtonInicio {
+      display: none;
+    }
+  }
+
+
+  
