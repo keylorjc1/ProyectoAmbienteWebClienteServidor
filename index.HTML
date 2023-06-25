@@ -1,343 +1,419 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>WapiCR</title>
-      <link rel="stylesheet" href="CSS/index.css">
-      <link rel="stylesheet" href="css/normalize.css">
-      <link rel="stylesheet" href="/CSS/Testimonio.css">
-      <script src="script.js" defer></script>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-   </head>
-   <body>
-      <div>
-        <div class="fullNav shadow bg-white rounded">
-                <div class="custom-btn">
-                    <span class="fas fa-bars"></span>
-                 </div>
-                 <div class="navbar-brand">
-                    <a href="#">
-                        <img src="/Images/WapiCRNoBG.png" alt="WapiCR" width="150" height="110">
-                    </a>
-                 </div>
-                 <a href="/Layout/Cotizacion.html" class="ButtonInicio">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
-                        <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
-                    </svg>
-                    <span>Pedir Una Cotizacion</span>
-                </a>
-                <a href="/Layout/Citas.html" class="ButtonInicio">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                    </svg>
-                    <span>Agendar Una Cita</span>
-                </a>
-                <a href="index.html" class="shopCart ButtonInicio">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                    </svg>  
-                    <span>Comprar</span>                    
-                </a>
-                
-        </div>
-         <nav class="sidebar">
-            <div class="text">
-               WAPICR
-            </div>
-            <ul>
-               <li class="active"><a href="#">Novedades</a></li>
-               <li><a href="#">Testimonios</a></li>
-               <li><a href="#">Galeria</a></li>
-               <li><a href="#">Contacto</a></li>
-               <li><a href="#">Preguntas</a></li>
-            </ul>
-         </nav>
-         <div id="hero">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/index.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="/CSS/Testimonio.css">
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>WapiCR</title>
+</head>
+
+<body>
+  <!---INICIO Barra Navegacion-->
+  <div>
+    <div class="fullNav shadow bg-white rounded">
+      <div class="custom-btn">
+        <span class="fas fa-bars"></span>
+      </div>
+      <div class="navbar-brand">
+        <a href="#">
+          <img src="/Images/WapiCRNoBG.png" alt="WapiCR" width="150" height="110">
+        </a>
+      </div>
+      <a href="/Layout/Cotizacion.html" class="ButtonInicio">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-bookmark-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+        </svg>
+        <span>Pedir Una Cotizacion</span>
+      </a>
+      <a href="/Layout/Citas.html" class="ButtonInicio">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-pencil-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+        </svg>
+        <span>Agendar Una Cita</span>
+      </a>
+      <a href="index.html" class="shopCart ButtonInicio">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-cart-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+        </svg>
+        <span>Comprar</span>
+      </a>
+    </div>
+
+    <nav class="sidebar">
+      <div class="text">
+        WAPICR
+      </div>
+      <ul>
+        <li class="active"><a href="#">Novedades</a></li>
+        <li><a href="#">Testimonios</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Preguntas</a></li>
+      </ul>
+    </nav>
+    <div id="hero">
+    </div>
+  </div>
+  <!---FIN Barra Navegacion-->
+
+  <!-- novedades -->
+  <div>
+    <div class="card-novedades">
+      Novedades
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img src="/Images/Nails1.jpg" alt="Imagen 1">
+        <div class="content">
+          <h2>WapiCR Nails original designs</h2>
+          <p>Experimenta los resultados excepcionales que solo el mejor producto puede ofrecer.</p>
+          <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
         </div>
       </div>
-      <!-- novedades -->
-      <div>
-        <div class="card-novedades">
-            Novedades
-         </div>
-        <div class="card-container">
-            <div class="card">
-                <img src="/Images/Nails1.jpg" alt="Imagen 1">
-                <div class="content">
-                    <h2>WapiCR Nails original designs</h2>
-                    <p>Experimenta los resultados excepcionales que solo el mejor producto puede ofrecer.</p>
-                    <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/Images/Nails2.jpg" alt="Imagen 1">
-                <div class="content">
-                    <h2>WapiCR Nails original designs</h2>
-                    <p>Descubre una calidad inigualable y resultados impresionantes.</p>
-                    <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <img src="/Images/Nails3.jpg" alt="Imagen 2">
-                <div class="content">
-                    <h2>WapiCR Nails original designs</h2>
-                    <p>Potencia tu rutina con el mejor producto del mercado.</p>
-                    <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
-                </div>
-            </div>
-    
-            <div class="card">
-                <img src="/Images/Nails4.jpg" alt="Imagen 2">
-                <div class="content">
-                    <h2>WapiCR Nails original designs</h2>
-                    <p>Confía en el mejor producto para obtener los mejores resultados.</p>
-                    <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
-                </div>
-            </div>
-    
-            <div class="card">
-                <img src="/Images/Nails5.jpg" alt="Imagen 2">
-                <div class="content">
-                    <h2>WapiCR Nails original designs</h2>
-                    <p>Su rendimiento superior te sorprenderá y transformará tu experiencia.</p>
-                    <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
-                </div>
-            </div>
-    
-            <div class="card">
-                <img src="/Images/Nails6.jpg" alt="Imagen 2">
-                <div class="content">
-                    <h2>WapiCR Nails original designs</h2>
-                    <p>No conformes con menos que lo mejor. </p>
-                    <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
-                </div>
-            </div>
+      <div class="card">
+        <img src="/Images/Nails2.jpg" alt="Imagen 1">
+        <div class="content">
+          <h2>WapiCR Nails original designs</h2>
+          <p>Descubre una calidad inigualable y resultados impresionantes.</p>
+          <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
+        </div>
       </div>
-      <!-- Testimonios -->
-      <div>
-        <div class="card-novedades">
-            Testimonios
-         </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="content">
-                    <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5">
-                        <label for="star5"></label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1"></label>
-                      </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia maxime ratione doloribus nemo minima eius at, repellendus animi odit atque consequuntur minus numquam earum veniam, quae aspernatur, ipsa quibusdam quas?</p>
-                </div>
+
+      <div class="card">
+        <img src="/Images/Nails3.jpg" alt="Imagen 2">
+        <div class="content">
+          <h2>WapiCR Nails original designs</h2>
+          <p>Potencia tu rutina con el mejor producto del mercado.</p>
+          <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/Images/Nails4.jpg" alt="Imagen 2">
+        <div class="content">
+          <h2>WapiCR Nails original designs</h2>
+          <p>Confía en el mejor producto para obtener los mejores resultados.</p>
+          <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/Images/Nails5.jpg" alt="Imagen 2">
+        <div class="content">
+          <h2>WapiCR Nails original designs</h2>
+          <p>Su rendimiento superior te sorprenderá y transformará tu experiencia.</p>
+          <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/Images/Nails6.jpg" alt="Imagen 2">
+        <div class="content">
+          <h2>WapiCR Nails original designs</h2>
+          <p>No conformes con menos que lo mejor. </p>
+          <a href="https://www.facebook.com/people/wapicr_/100063685083404/?sk=photos">Mas Informacion</a>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonios -->
+    <div>
+      <div class="card-novedades">
+        Testimonios
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="content">
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5">
+              <label for="star5"></label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4"></label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3"></label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2"></label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1"></label>
             </div>
-            <div class="card">
-                <div class="content">
-                    <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5">
-                        <label for="star5"></label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1"></label>
-                      </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique explicabo exercitationem suscipit ipsam corporis, vero itaque fugit dignissimos ducimus. Earum voluptas aspernatur dicta consectetur deleniti soluta qui quod illo tempore!</p>
-                </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia maxime ratione doloribus nemo minima
+              eius at, repellendus animi odit atque consequuntur minus numquam earum veniam, quae aspernatur, ipsa
+              quibusdam quas?</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5">
+              <label for="star5"></label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4"></label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3"></label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2"></label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1"></label>
             </div>
-            
-            <div class="card">
-                <div class="content">
-                    <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5">
-                        <label for="star5"></label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1"></label>
-                      </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, cumque minima nesciunt, illum quia nulla ex debitis dolores odio ipsa alias ad adipisci asperiores quidem voluptas! Quo quam odio cumque?</p>
-                </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique explicabo exercitationem suscipit
+              ipsam corporis, vero itaque fugit dignissimos ducimus. Earum voluptas aspernatur dicta consectetur
+              deleniti soluta qui quod illo tempore!</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5">
+              <label for="star5"></label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4"></label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3"></label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2"></label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1"></label>
             </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, cumque minima nesciunt, illum quia nulla
+              ex debitis dolores odio ipsa alias ad adipisci asperiores quidem voluptas! Quo quam odio cumque?</p>
+          </div>
+        </div>
       </div>
       <!-- Galeria -->
       <div>
         <div class="card-novedades">
-            Galeria
-         </div>
+          Galeria
+        </div>
         <div class="card-container">
-            <div class="card">
-                <img class="img-producto" src="/Images/Producto1.jpg" alt="Imagen 1">
-                <div class="content">
-                </div>
+          <div class="card">
+            <img class="img-producto" src="/Images/Producto1.jpg" alt="Imagen 1">
+            <div class="content">
             </div>
-            <div class="card">
-                <img class="img-producto" src="/Images/Producto10.jpg" alt="Imagen 1">
-                <div class="content">
-                </div>
+          </div>
+          <div class="card">
+            <img class="img-producto" src="/Images/Producto10.jpg" alt="Imagen 1">
+            <div class="content">
             </div>
-            
-            <div class="card">
-                <img class="img-producto" src="/Images/Producto11.jpg" alt="Imagen 2">
-                <div class="content">
-                </div>
-            </div>
-    
-            <div class="card">
-                <img class="img-producto" src="/Images/Producto12.jpg" alt="Imagen 2">
-                <div class="content">
-            </div>
-            </div>
-    
-            <div class="card">
-                <img class="img-producto" src="/Images/Producto13.jpg" alt="Imagen 2">
-                <div class="content">
-                </div>
-            </div>
-    
-            <div class="card">
-                <img class="img-producto" src="/Images/Producto14.jpg" alt="Imagen 2">
-                <div class="content">
-                </div>
-            </div>
-            <div class="card">
-                <img class="img-producto" src="/Images/Producto15.jpg" alt="Imagen 2">
-                <div class="content">
-                </div>
-            </div>
-            <div class="card">
-                <img class="img-producto" src="/Images/Producto16.jpg" alt="Imagen 2">
-                <div class="content">
-                </div>
-            </div>
-            <div class="card">
-                <img class="img-producto" src="/Images/Producto17.jpg" alt="Imagen 2">
-                <div class="content">
-                </div>
-            </div>
-      </div>
+          </div>
 
-      <!-- Formulario -->
-      <div>
-        <div class="card-novedades">
+          <div class="card">
+            <img class="img-producto" src="/Images/Producto11.jpg" alt="Imagen 2">
+            <div class="content">
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="img-producto" src="/Images/Producto12.jpg" alt="Imagen 2">
+            <div class="content">
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="img-producto" src="/Images/Producto13.jpg" alt="Imagen 2">
+            <div class="content">
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="img-producto" src="/Images/Producto14.jpg" alt="Imagen 2">
+            <div class="content">
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-producto" src="/Images/Producto15.jpg" alt="Imagen 2">
+            <div class="content">
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-producto" src="/Images/Producto16.jpg" alt="Imagen 2">
+            <div class="content">
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-producto" src="/Images/Producto17.jpg" alt="Imagen 2">
+            <div class="content">
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div>
+          <div class="card-novedades">
             Contacto
-         </div>
-        <!-- Wrapper container -->
-<div class="container py-4">
+          </div>
+          <!-- Wrapper container -->
+          <div class="container py-4">
 
-    <!-- Bootstrap 5 starter form -->
-    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-  
-      <!-- Name input -->
-      <div class="mb-3">
-        <label class="form-label" for="name" style="color: #ec86b1;">Name</label>
-        <input class="form-control" id="name" type="text"  data-sb-validations="required" />
-        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
-      </div>
-  
-      <!-- Email address input -->
-      <div class="mb-3">
-        <label class="form-label" for="emailAddress" style="color: #ec86b1;">Email Address</label>
-        <input class="form-control" id="emailAddress" type="email"  data-sb-validations="required, email" />
-        <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-        <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-      </div>
-  
-      <!-- Message input -->
-      <div class="mb-3">
-        <label class="form-label" for="message" style="color: #ec86b1;">Message</label>
-        <textarea class="form-control" id="message" type="text"  style="height: 10rem;" data-sb-validations="required"></textarea>
-        <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
-      </div>
-  
-      <!-- Form submissions success message -->
-      <div class="d-none" id="submitSuccessMessage">
-        <div class="text-center mb-3">Form submission successful!</div>
-      </div>
-  
-      <!-- Form submissions error message -->
-      <div class="d-none" id="submitErrorMessage">
-        <div class="text-center text-danger mb-3">Error sending message!</div>
-      </div>
-  
-      <!-- Form submit button -->
-      <div class="d-grid">
-        <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
-      </div>
-  
-    </form>
-  
-  </div>
-  
-  <!-- SB Forms JS -->
-  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-      </div>
-      <!-- Preguntas frecuentes -->
-      <div>
-        <div class="card-novedades">
+            <!-- Bootstrap 5 starter form -->
+            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+              <!-- Name input -->
+              <div class="mb-3">
+                <label class="form-label" for="name" style="color: #ec86b1;">Name</label>
+                <input class="form-control" id="name" type="text" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+              </div>
+
+              <!-- Email address input -->
+              <div class="mb-3">
+                <label class="form-label" for="emailAddress" style="color: #ec86b1;">Email Address</label>
+                <input class="form-control" id="emailAddress" type="email" data-sb-validations="required, email" />
+                <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.
+                </div>
+              </div>
+
+              <!-- Message input -->
+              <div class="mb-3">
+                <label class="form-label" for="message" style="color: #ec86b1;">Message</label>
+                <textarea class="form-control" id="message" type="text" style="height: 10rem;"
+                  data-sb-validations="required"></textarea>
+                <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+              </div>
+
+              <!-- Form submissions success message -->
+              <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">Form submission successful!</div>
+              </div>
+
+              <!-- Form submissions error message -->
+              <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">Error sending message!</div>
+              </div>
+
+              <!-- Form submit button -->
+              <div class="d-grid">
+                <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+              </div>
+
+            </form>
+
+          </div>
+
+          <!-- SB Forms JS -->
+          <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        </div>
+        <!-- Preguntas frecuentes -->
+        <div>
+          <div class="card-novedades">
             Preguntas frecuentes
-         </div>
+          </div>
 
-         <div class="container">
-        
-          <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="faqHeading1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1" style="background-color: #9268a8; color: white;">
-                  ¿Cuáles son los diferentes tipos de esmaltes de uñas disponibles en el mercado?
-                </button>
-              </h2>
-              <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-            Existen varios tipos de esmaltes de uñas, incluyendo esmaltes tradicionales, esmaltes en gel y esmaltes semipermanentes. Los esmaltes tradicionales son los más comunes y se secan al aire libre. Los esmaltes en gel requieren una lámpara UV o LED para el secado y ofrecen una mayor duración. Los esmaltes semipermanentes son una combinación de los dos anteriores, ofreciendo una mayor duración que los tradicionales pero sin requerir tanto tiempo de exposición a la lámpara.
+          <div class="container">
+
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1"
+                    style="background-color: #9268a8; color: white;">
+                    ¿Cuáles son los diferentes tipos de esmaltes de uñas disponibles en el mercado?
+                  </button>
+                </h2>
+                <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Existen varios tipos de esmaltes de uñas, incluyendo esmaltes tradicionales, esmaltes en gel y
+                    esmaltes semipermanentes. Los esmaltes tradicionales son los más comunes y se secan al aire libre.
+                    Los esmaltes en gel requieren una lámpara UV o LED para el secado y ofrecen una mayor duración. Los
+                    esmaltes semipermanentes son una combinación de los dos anteriores, ofreciendo una mayor duración
+                    que los tradicionales pero sin requerir tanto tiempo de exposición a la lámpara.
+                  </div>
                 </div>
               </div>
-            </div>
-          
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="faqHeading2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2" style="background-color: #9268a8; color: white;">
-                  ¿Cuál es la diferencia entre un esmalte mate y un esmalte con acabado brillante?
-                </button>
-              </h2>
-              <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-              La principal diferencia entre un esmalte mate y uno con acabado brillante radica en el acabado visual. Un esmalte mate ofrece un aspecto opaco y sin brillo, mientras que un esmalte con acabado brillante proporciona un aspecto brillante y lustroso. Ambos tipos de esmaltes tienen sus propias ventajas y estilos, y la elección entre ellos depende del efecto deseado.
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2"
+                    style="background-color: #9268a8; color: white;">
+                    ¿Cuál es la diferencia entre un esmalte mate y un esmalte con acabado brillante?
+                  </button>
+                </h2>
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    La principal diferencia entre un esmalte mate y uno con acabado brillante radica en el acabado
+                    visual. Un esmalte mate ofrece un aspecto opaco y sin brillo, mientras que un esmalte con acabado
+                    brillante proporciona un aspecto brillante y lustroso. Ambos tipos de esmaltes tienen sus propias
+                    ventajas y estilos, y la elección entre ellos depende del efecto deseado.
+                  </div>
                 </div>
               </div>
-            </div>
-          
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="faqHeading3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3" style="background-color: #9268a8; color: white;">
-              ¿Cuáles son algunos consejos para mantener las uñas saludables y fuertes?
-                </button>
-              </h2>
-              <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  Mantén las uñas limpias y secas para evitar la acumulación de bacterias.
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3"
+                    style="background-color: #9268a8; color: white;">
+                    ¿Cuáles son algunos consejos para mantener las uñas saludables y fuertes?
+                  </button>
+                </h2>
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Mantén las uñas limpias y secas para evitar la acumulación de bacterias.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+          crossorigin="anonymous"></script>
+</body>
+
+<footer class="bg-dark text-center text-white">
+  <div class="container p-4 pb-0">
+    <section class="">
+      <form action="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Registrarse para recibir noticias</strong>
+            </p>
           </div>
-          
-      </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-   </body>
+
+          <div class="col-md-5 col-12">
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Correo electrónico</label>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Suscribirse
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright: WAPI CR
+  </div>
+</footer>
+
+</div>
+
 </html>
