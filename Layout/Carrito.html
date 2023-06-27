@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>Citas</title>
+    <title>Carrito</title>
 </head>
 
 <body>
@@ -71,61 +71,38 @@
     </div>
     <!---FIN Barra Navegacion-->
 
-    <h2>Administrador de Citas</h2>
-    <div>
-        <div id="contenido">
-            <div>
-                <form id="nueva-cita">
-                    <legend>Datos del Cliente</legend>
-                    <div>
-                        <label>Nombre:</label>
-                        <div>
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                        </div>
-                    </div>
-                    <div>
-                        <label>Apellidos:</label>
-                        <div>
-                            <input type="text" id="apellido" name="apellido" placeholder="Apellidos">
-                        </div>
-                    </div>
-                    <div>
-                        <label>Teléfono:</label>
-                        <div>
-                            <input type="tel" id="telefono" name="telefono" placeholder="Número de Teléfono">
-                        </div>
-                    </div>
-                    <div>
-                        <label>Fecha:</label>
-                        <div>
-                            <input type="date" id="fecha" name="fecha">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label>Hora:</label>
-                        <div>
-                            <input type="time" id="hora" name="hora">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label>Comentarios:</label>
-                        <div>
-                            <textarea id="comentarios" name="comentarios"></textarea>
-                        </div>
-                    </div>
-                    <div>
-                        <button type="submit">Crear Cita</button>
-                    </div>
-                </form>
+    <section class="h-100" style="background-color: #eee;">
+        <div class="container h-100 py-5">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-10">
+      
+              <div class="card-novedades">
+                <h3>Carrito de compras</h3>
+                <div>
+                  <p class="#"><span class="sort">Ordenado por:</span> <a href="#!" class="text-body">PRECIO <i></i></a></p>
+                </div>
+              </div>
+      
+              <div class="card mb-4">
+                <div class="card-body p-4 d-flex flex-row">
+                  <div class="form-outline flex-fill">
+                    <input type="text" id="form1" class="form-control form-control-lg" />
+                    <label class="form-label" for="form1">Código de descuento</label>
+                  </div>
+                  <button type="button" class="btn btn-outline-warning btn-lg ms-3">Aplicar</button>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="card-body">
+                  <button type="button" class="btn btn-warning btn-block btn-lg">Proceder a pagar</button>
+                </div>
+              </div>
+      
             </div>
-            <div>
-                <h2 id="administra">Administra tus Citas</h2>
-                <ul id="citas"></ul>
-            </div>
-        </div> <!--.row-->
-    </div><!--.container-->
+          </div>
+        </div>
+      </section>
 </body>
 
 <footer class="bg-dark text-center text-white">
