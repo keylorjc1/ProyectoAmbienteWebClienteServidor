@@ -4,6 +4,12 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
+
+        .card-galeria{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
         
         .card {
             width: calc(33.33% - 20px);
@@ -17,10 +23,7 @@
         }
 
         .card .img-producto{
-            width: 70%;
-            height: 100%;
-            padding-left: 5%;
-            padding-right: 10%;
+            padding-top: 10%;
         }
         
         .card .content {
@@ -30,6 +33,18 @@
         .content{
             margin: 4%;
         }
+        
+        .contentGaleria{
+            padding-top: 5%;
+            color: #ec86b1;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .spanGaleria{
+            margin: 5%;
+        }
+
 
         .content a{
             padding-left: 17%;
@@ -40,7 +55,7 @@
         }
         
         .card h2 {
-            margin: 0 0 10px;
+            margin:10px;
             font-size: 18px;
             padding-left: 17%;
             color: #9268a8;
@@ -105,3 +120,4 @@
             text-transform: uppercase;
             color: #ec86b1;
           }
+
