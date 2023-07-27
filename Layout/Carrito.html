@@ -1,111 +1,389 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/Cotizador.css">
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="/CSS/Testimonio.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/Carrito.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
     <script src="/script.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <title>Carrito</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!---INICIO Barra Navegacion-->
     <div>
-        <div class="fullNav shadow bg-white rounded">
-            <div class="custom-btn">
-                <span class="fas fa-bars"></span>
-            </div>
-            <div class="navbar-brand">
-                <a href="../index.html">
-                    <img src="/Images/WapiCRNoBG.png" alt="WapiCR" width="150" height="110">
-                </a>
-            </div>
-            <a href="/Layout/Cotizacion.html" class="ButtonInicio">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4"
-                    class="bi bi-bookmark-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
-                </svg>
-                <span>Pedir Una Cotizacion</span>
-            </a>
-            <a href="/Layout/Citas.html" class="ButtonInicio">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-pencil-fill"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                </svg>
-                <span>Agendar Una Cita</span>
-            </a>
-            <a href="Carrito.html" class="shopCart ButtonInicio">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-cart-fill"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                </svg>
-                <span>Comprar</span>
-            </a>
-
+      <div class="fullNav shadow bg-white rounded">
+        <div class="custom-btn">
+          <span class="fas fa-bars"></span>
         </div>
-        <nav class="sidebar">
-            <div class="text">
-                WAPICR
-            </div>
-            <ul>
-                <li class="active"><a href="#">Novedades</a></li>
-                <li><a href="#">Testimonios</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Preguntas</a></li>
-            </ul>
-        </nav>
-    </div>
+        <div class="navbar-brand">
+          <a href="../index.html">
+            <img
+              src="/Images/WapiCRNoBG.png"
+              alt="WapiCR"
+              width="150"
+              height="110"
+            />
+          </a>
+        </div>
+        <a href="/Layout/Cotizacion.html" class="ButtonInicio">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#eca4c4"
+            class="bi bi-bookmark-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"
+            />
+          </svg>
+          <span>Pedir Una Cotizacion</span>
+        </a>
+        <a href="/Layout/Citas.html" class="ButtonInicio">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#eca4c4"
+            class="bi bi-pencil-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
+            />
+          </svg>
+          <span>Agendar Una Cita</span>
+        </a>
+        <a href="Carrito.html" class="shopCart ButtonInicio">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#eca4c4"
+            class="bi bi-cart-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+            />
+          </svg>
+          <span>Comprar</span>
+        </a>
+      </div>
+
+      <nav class="sidebar">
+        <div class="text">WAPICR</div>
+        <ul>
+          <li class="active"><a href="#">Novedades</a></li>
+          <li><a href="#">Testimonios</a></li>
+          <li><a href="#">Galeria</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Preguntas</a></li>
+        </ul>
+      </nav>
+      <div id="hero"></div>
     </div>
     <!---FIN Barra Navegacion-->
-
-    <section class="h-100" style="background-color: #eee;">
-        <div class="container h-100 py-5">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-10">
-      
-              <div class="card-novedades">
-                <h3>Carrito de compras</h3>
-                <div>
-                  <p class="#"><span class="sort">Ordenado por:</span> <a href="#!" class="text-body">PRECIO <i></i></a></p>
-                </div>
-              </div>
-      
-              <div class="card mb-4">
-                <div class="card-body p-4 d-flex flex-row">
-                  <div class="form-outline flex-fill">
-                    <input type="text" id="form1" class="form-control form-control-lg" />
-                    <label class="form-label" for="form1">Código de descuento</label>
+    <header id="header" class="header">
+      <div class="container">
+        <div>
+          <div>
+            <ul>
+              <li class="submenu">
+                <div id="carrito">
+                  <table id="lista-carrito" class="table">
+                    <thead>
+                      <tr>
+                        <th class="px-4 text-center">Imagen</th>
+                        <th class="px-4 pl-5">Nombre</th>
+                        <th class="px-4 pl-50">Precio</th>
+                        <th class="px-4 pl-10">Cantidad</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+    
+                  <div>
+                    <a href="#" id="vaciar-carrito" class="button caritoBoton">Vaciar Carrito</a>
                   </div>
-                  <button type="button" class="btn btn-outline-warning btn-lg ms-3">Aplicar</button>
                 </div>
-              </div>
-      
-              <div class="card">
-                <div class="card-body">
-                  <button type="button" class="btn btn-warning btn-block btn-lg">Proceder a pagar</button>
-                </div>
-              </div>
-      
+              </li>
+            </ul>
+          </div>
+        </div> 
+      </div>
+    </header>
+    
+    
+
+    <div id="lista-cursos" class="container">
+      <h1 id="encabezado" class="titulo">Agrega tus productos</h1>
+      <div class="row">
+        <div class="four columns">
+          <div class="card">
+            <img src="/Images/Nails1.jpg" class="imagen-curso u-full-width" />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Esmalte de uñas black yellow</h4>
+
+              <p class="precio">$20</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="1"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+        <div class="four columns">
+          <div class="card">
+            <img src="/Images/Nails2.jpg" class="imagen-curso u-full-width" />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Esmalte de uñas confite</h4>
+
+              <p class="precio">$20</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="2"
+                >Agregar Al Carrito</a
+              >
             </div>
           </div>
         </div>
-      </section>
-</body>
+        <div class="four columns">
+          <div class="card">
+            <img src="/Images/Nails3.jpg" class="imagen-curso u-full-width" />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Esmalte de uñas normal</h4>
 
-<footer class="bg-dark text-center text-white">
+              <p class="precio">$20</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="3"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+      </div>
+      <!--.row-->
+      <div class="row">
+        <div class="four columns">
+          <div class="card">
+            <img
+              src="/Images/Producto1.jpg"
+              class="imagen-curso u-full-width"
+            />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Rimel para cejas</h4>
+
+              <p class="precio">$12</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="4"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+        <div class="four columns">
+          <div class="card">
+            <img
+              src="/Images/Producto10.jpg"
+              class="imagen-curso u-full-width"
+            />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Finish Gel - Drill Gel</h4>
+
+              <p class="precio">$10</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="5"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+        <div class="four columns">
+          <div class="card">
+            <img
+              src="/Images/Producto11.jpg"
+              class="imagen-curso u-full-width"
+            />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Fashions Decorations</h4>
+
+              <p class="precio">$13</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="6"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+      </div>
+      <!--.row-->
+      <div class="row">
+        <div class="four columns">
+          <div class="card">
+            <img
+              src="/Images/Producto12.jpg"
+              class="imagen-curso u-full-width"
+            />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Uñas decoracion</h4>
+
+              <p class="precio">$15</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="7"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+        <div class="four columns">
+          <div class="card">
+            <img
+              src="/Images/Producto13.jpg"
+              class="imagen-curso u-full-width"
+            />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Uñas decoracion</h4>
+
+              <p class="precio">$16</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="8"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+        <div class="four columns">
+          <div class="card">
+            <img
+              src="/Images/Producto16.jpg"
+              class="imagen-curso u-full-width"
+            />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Crystal Clear</h4>
+
+              <p class="precio">$14</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="9"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+      </div>
+      <!--.row-->
+      <div class="row">
+        <div class="four columns">
+          <div class="card">
+            <img
+              src="/Images/Producto17.jpg"
+              class="imagen-curso u-full-width"
+            />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Aceite de Cuticula</h4>
+
+              <p class="precio">$16</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="10"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+        <div class="four columns">
+          <div class="card">
+            <img
+              src="/Images/Producto18.jpg"
+              class="imagen-curso u-full-width"
+            />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Rimels negros</h4>
+              <p class="precio">$17</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="11"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+        <div class="four columns">
+          <div class="card">
+            <img
+              src="/Images/Producto19.jpg"
+              class="imagen-curso u-full-width"
+            />
+            <div class="info-card" style="text-align: center">
+              <h4 class="textProductos">Esmalte negro</h4>
+              <p class="precio">$12</p>
+              <a
+                href="#"
+                class="u-full-width button-primary button input agregar-carrito"
+                data-id="12"
+                >Agregar Al Carrito</a
+              >
+            </div>
+          </div>
+          <!--.card-->
+        </div>
+      </div>
+      <!--.row-->
+    </div>
+
+    <script src="/JavaScript/Carrito.js" defer></script>
+  </body>
+
+  <footer class="bg-dark text-center text-white">
     <div class="container p-4 pb-0">
       <section class="">
         <form action="">
@@ -115,14 +393,16 @@
                 <strong>Registrarse para recibir noticias</strong>
               </p>
             </div>
-  
+
             <div class="col-md-5 col-12">
               <div class="form-outline form-white mb-4">
                 <input type="email" id="form5Example2" class="form-control" />
-                <label class="form-label" for="form5Example2">Correo electrónico</label>
+                <label class="form-label" for="form5Example2"
+                  >Correo electrónico</label
+                >
               </div>
             </div>
-  
+
             <div class="col-auto">
               <button type="submit" class="btn btn-outline-light mb-4">
                 Suscribirse
@@ -132,10 +412,9 @@
         </form>
       </section>
     </div>
-  
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
       © 2023 Copyright: WAPI CR
     </div>
   </footer>
-
 </html>

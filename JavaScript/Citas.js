@@ -107,7 +107,7 @@ class UI {
             horaParrafo.innerHTML = `<span class="font-weight-bolder">Hora: </span> ${hora}`;
 
             const descripcionParrafo = document.createElement('p');
-            descripcionParrafo.innerHTML = `<span class="font-weight-bolder">Síntomas: </span> ${descripcion}`;
+            descripcionParrafo.innerHTML = `<span class="font-weight-bolder">Descripcio: </span> ${descripcion}`;
 
             // Agregar un botón de eliminar...
             const btnEliminar = document.createElement('button');
