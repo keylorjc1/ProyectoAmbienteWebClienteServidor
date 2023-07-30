@@ -152,7 +152,7 @@ function nuevaCita(e) {
 
     // Validar
     if( nombre === '' ||  telefono === '' || fecha === ''  || hora === '' || descripcion === '' ) {
-        ui.imprimirAlerta('Todos los mensajes son Obligatorios', 'error')
+        ui.imprimirAlerta('Todos los campos son obligatorios', 'error')
 
         return;
     }

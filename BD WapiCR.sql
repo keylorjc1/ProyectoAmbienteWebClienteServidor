@@ -44,17 +44,23 @@ CREATE TABLE Producto (
   CantidadStock INT
 );
 
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE Cita;
+SET FOREIGN_KEY_CHECKS = 1;
+
 -- Tabla de citas
 CREATE TABLE Cita (
-  IDCita INT PRIMARY KEY,
-  FechaHoraInicio DATETIME,
-  FechaHoraFin DATETIME,
-  IDCliente INT,
-  IDEmpleado INT,
-  IDServicio INT,
-  FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
-  FOREIGN KEY (IDEmpleado) REFERENCES Empleado(IDEmpleado),
-  FOREIGN KEY (IDServicio) REFERENCES Servicio(IDServicio)
+  IDCita INT PRIMARY KEY AUTO_INCREMENT,
+  nombre_completo VARCHAR(100),
+  fecha DATETIME,
+  hora DATETIME,
+  descripcion VARCHAR(500)
+  -- IDCliente INT,
+  -- IDEmpleado INT,
+  -- IDServicio INT,
+  -- FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
+  -- FOREIGN KEY (IDEmpleado) REFERENCES Empleado(IDEmpleado),
+  -- FOREIGN KEY (IDServicio) REFERENCES Servicio(IDServicio)
 );
 
 -- Tabla de compras
