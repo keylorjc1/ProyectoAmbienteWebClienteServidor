@@ -52,8 +52,9 @@ SET FOREIGN_KEY_CHECKS = 1;
 CREATE TABLE Cita (
   IDCita INT PRIMARY KEY AUTO_INCREMENT,
   nombre_completo VARCHAR(100),
+  telefono VARCHAR(15),
   fecha DATETIME,
-  hora DATETIME,
+  hora TIME,
   descripcion VARCHAR(500)
   -- IDCliente INT,
   -- IDEmpleado INT,
