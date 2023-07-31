@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
-
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="/CSS/Citas.css">
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="../CSS/Testimonio.css">
+    <link rel="stylesheet" href="../CSS/Citas.css">
+    <script src="../script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -26,7 +23,7 @@
                 </div>
                 <div class="navbar-brand">
                     <a href="../index.html">
-                        <img src="/Images/WapiCRNoBG.png" alt="WapiCR" width="150" height="110">
+                        <img src="../Images/WapiCRNoBG.png" alt="WapiCR" width="150" height="110">
                     </a>
                 </div>
                 <a href="/Layout/Cotizacion.html" class="ButtonInicio">
@@ -37,7 +34,7 @@
                     </svg>
                     <span>Pedir Una Cotizacion</span>
                 </a>
-                <a href="/Layout/Citas.html" class="ButtonInicio">
+                <a href="/Layout/Citas.php" class="ButtonInicio">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-pencil-fill"
                         viewBox="0 0 16 16">
                         <path
@@ -73,12 +70,14 @@
         <!---FIN Barra Navegacion-->
 
         <main>
-            <h1>Registro ingresado satisfactoriamente</h1>
+            <h1>Cita registrada satisfactoriamente.</h1>
         </main>
-  
+
+        <script src="/JavaScript/Citas.js" defer></script>
+
+</body>
+
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2023 Copyright: WAPI CR
     </div>
   </footer>
-
-</html>

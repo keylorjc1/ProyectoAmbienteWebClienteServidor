@@ -1,5 +1,3 @@
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +34,7 @@
                     </svg>
                     <span>Pedir Una Cotizacion</span>
                 </a>
-                <a href="/Layout/Citas.html" class="ButtonInicio">
+                <a href="/Layout/Citas.php" class="ButtonInicio">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-pencil-fill"
                         viewBox="0 0 16 16">
                         <path
@@ -75,7 +73,7 @@
     <div class="container mt-5 p-5">
         <div id="contenido" class="row">
             <div class="col-md-6 agregar-cita">
-                <form id="nueva-cita" action="php/procesar-cita.php" method="post">
+                <form id="nueva-cita" action="../php/procesar-cita.php" method="post">
                     <legend class="mb-4 ingresarDatos">Ingresa tus Datos</legend>
                     <div class="form-group row">
                         <label class="col-sm-4 col-lg-4 col-form-label formDatos">Nombre Completo:</label>
@@ -156,5 +154,3 @@
       © 2023 Copyright: WAPI CR
     </div>
   </footer>
-
-</html>

@@ -9,7 +9,7 @@ function Conecta()
 
 
     // 1. Establecer la conexión con el motor de base de datos
-    $conexion = mysqli_connect($server, $user, $password, $dataBase, 3306);
+    $conexion = mysqli_connect($server, $user, $password, $dataBase);
 
     if(!$conexion){
         echo "Ocurrió un error al establecer la conexión: " . mysqli_connect_error();
