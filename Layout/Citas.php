@@ -134,7 +134,7 @@
                 $conn->close();
                 ?>
 
-                <h3>Actualizar o eliminar datos de alumno</h3>
+                <h3>Actualizar o eliminar datos de cita</h3>
                 <form name="test" method="post" action="Citas.php">
                     <p>ID Cita (para eliminar, solo llenar este campo):
                         <input type="text" name="id" value="">
@@ -154,8 +154,8 @@
                         Descripción:
                         <textarea id="descripcion" name="descripcion" class="form-control"></textarea>
                         <br />
-                        <INPUT TYPE="submit" name="btnBorrar" value="Borrar registro"> <-->
-                            <INPUT TYPE="submit" name="btnActualizar" value="Actualizar registro">
+                        <INPUT TYPE="submit" name="btnBorrar" value="Borrar cita"> <-->
+                            <INPUT TYPE="submit" name="btnActualizar" value="Actualizar cita">
                     </p>
                 </form>
 
