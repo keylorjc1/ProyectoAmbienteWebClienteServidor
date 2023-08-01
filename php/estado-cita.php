@@ -26,7 +26,7 @@
                         <img src="../Images/WapiCRNoBG.png" alt="WapiCR" width="150" height="110">
                     </a>
                 </div>
-                <a href="/Layout/Cotizacion.html" class="ButtonInicio">
+                <a href="../Layout/Cotizacion.html" class="ButtonInicio">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4"
                         class="bi bi-bookmark-fill" viewBox="0 0 16 16">
                         <path
@@ -34,7 +34,7 @@
                     </svg>
                     <span>Pedir Una Cotizacion</span>
                 </a>
-                <a href="/Layout/Citas.php" class="ButtonInicio">
+                <a href="../Layout/Citas.php" class="ButtonInicio">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-pencil-fill"
                         viewBox="0 0 16 16">
                         <path
@@ -42,7 +42,7 @@
                     </svg>
                     <span>Agendar Una Cita</span>
                 </a>
-                <a href="Carrito.html" class="shopCart ButtonInicio">
+                <a href="../Layout/Carrito.html" class="shopCart ButtonInicio">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-cart-fill"
                         viewBox="0 0 16 16">
                         <path
