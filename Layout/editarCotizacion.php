@@ -2,17 +2,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Cotizador.css">
     <link rel="stylesheet" href="../CSS/Testimonio.css">
-    <link rel="stylesheet" href="../CSS/Citas.css">
-    <script src="../Script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>Editar cita</title>
+    <title>Cotizar</title>
 </head>
 
 <body>
-
     <!---INICIO Barra Navegacion-->
     <div>
         <div class="fullNav shadow bg-white rounded">
@@ -68,59 +66,67 @@
         $userid = $_GET['user_id'];
     }
     // Traer datos de tabla Cita
-    $sql = "SELECT * FROM cita WHERE IDCita = $userid";
+    $sql = "SELECT * FROM cotizacion WHERE idCotizacion = $userid";
     $conn = Conecta();
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
-        while($row = $result->fetch_assoc()){
-            $id = $row['IDCita'];
-            $nombre = $row['nombre_completo'];
-            $telefono = $row['telefono'];
-            $fecha = $row['fecha'];
-            $hora = $row['hora'];
-            $descripcion = $row['descripcion'];
+        while ($row = $result->fetch_assoc()) {
+            $id = $row['idCotizacion'];
+            $producto = $row['nombreProducto'];
+            $cantidad = $row['cantidad'];
+            $tipoProducto = $row['tipoProducto'];
         }
     }
 
     //Procesar columna cargada
     if (isset($_POST['update'])) {
-        $nombre = $_POST['nombre'];
-        $telefono = $_POST['telefono'];
-        $fecha = $_POST['fecha'];
-        $hora = $_POST['hora'];
-        $descripcion = $_POST['descripcion'];
+        $producto = $_POST['producto'];
+        $cantidad = $_POST['cantidad'];
+        $tipoProducto = $_POST['tipoProducto'];
 
         // Realizar actualización 
-        $sql = "UPDATE Cita SET nombre_completo = '{$nombre}' , telefono = '{$telefono}' , fecha = '{$fecha}' , hora = '{$hora}' , descripcion = '{$descripcion}' WHERE IDCita = $userid";
+        $sql = "UPDATE Cotizacion SET nombreProducto = '{$producto}' , cantidad = '{$cantidad}' , tipoProducto = '{$tipoProducto}' WHERE idCotizacion = $userid";
         $update_user = mysqli_query($conn, $sql);
-        echo "<script type='text/javascript'>alert('Cita actualizada correctamente.')</script>";
+        echo "<script type='text/javascript'>alert('Cotización actualizada correctamente.')</script>";
     }
     Desconecta($conn);
     ?>
 
     <form action="" method="post">
-        <!-- <p>ID Cita (para eliminar, solo llenar este campo):
-            <input type="text" name="id" value="">
-            <br /> -->
-            Nombre completo:
-            <input type="text" name="nombre" value="<?php echo $nombre ?>">
-            <br />
-            Teléfono:
-            <input type="tel" name="telefono" value="<?php echo $telefono ?>">
-            <br />
-            Fecha:
-            <input type="date" name="fecha" value="<?php echo $fecha ?>">
-            <br />
-            Hora:
-            <input type="time" name="hora" value="<?php echo $hora ?>">
-            <br />
-            Descripción:
-            <input type="text" name="descripcion" value="<?php echo $descripcion ?>">
-            <br />
-            <input type="submit" name="update" class="btn btn-primary mt-2" value="Actualizar">
+        Producto:
+        <select id="producto" name="producto" class="select-box">
+            <option value="">- Seleccionar -</option>
+            <option value="Esmaltes">Esmaltes</option>
+            <option value="Decoraciones">Decoraciones</option>
+            <option value="Herramientas">Herramientas</option>
+        </select>
+        <br />
+        Cantidad:
+        <select id="cantidad" name="cantidad"> <!--onchange="myFunction(this.value)" -->
+            <option value="">- 0 -</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <br />
+        Tipo de producto:
+        <select id="tipoProducto" name="tipoProducto" class="select-box">
+            <option value="">- Seleccionar -</option>
+            <option value="Completo">Completo</option>
+            <option value="Basico">Basico</option>
+        </select>
+        <br />
+        <input type="submit" name="update" class="btn btn-primary mt-2" value="Actualizar">
         </p>
-        <a href='Citas.php' class='btn btn-secondary'><i class='bi bi-pencil'></i>Regresar a citas</a>
+        <a href='Cotizacion.php' class='btn btn-secondary'><i class='bi bi-pencil'></i>Regresar a citas</a>
     </form>
 
     <footer class="bg-dark text-center text-white">

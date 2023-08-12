@@ -64,6 +64,15 @@ CREATE TABLE Cita (
   -- FOREIGN KEY (IDServicio) REFERENCES Servicio(IDServicio)
 );
 
+--Tabla de cotizaciones
+CREATE TABLE Cotizacion (
+  idCotizacion INT PRIMARY KEY AUTO_INCREMENT,
+  nombreProducto VARCHAR(50),
+  cantidad INT,
+  tipoProducto VARCHAR(20),
+  fechaIngreso DATE DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Tabla de compras
 CREATE TABLE Compra (
   IDCompra INT PRIMARY KEY,

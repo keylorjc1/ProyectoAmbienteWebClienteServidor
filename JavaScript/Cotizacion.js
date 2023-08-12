@@ -185,8 +185,18 @@ function cotizarProducto(e) {
         const total = seguro.cotizarProducto();
 
         //utilizar el prototype 
-        ui.mostrarResultado(total,seguro);
-}
+            ui.mostrarResultado(total, seguro);
+        }
 
 
+        //Incremental para SELECT
+        var select = document.getElementById("cantidad");
+
+        //loop de primera lista
+        for (var i = 1; i <= 25; i++) {
+            var opt = document.createElement('option');
+            opt.value = i;
+            opt.innerHTML = i;
+            select.appendChild(opt);
+        }
 

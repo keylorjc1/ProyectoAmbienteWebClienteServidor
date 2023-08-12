@@ -24,7 +24,7 @@
                     <img src="../Images/WapiCRNoBG.png" alt="WapiCR" width="150" height="110">
                 </a>
             </div>
-            <a href="Cotizacion.html" class="ButtonInicio">
+            <a href="Cotizacion.php" class="ButtonInicio">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eca4c4" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
                     <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
                 </svg>
@@ -150,7 +150,7 @@
                                     //Botón para editar
                                     echo " <td class='text-center' > <a href='editarCita.php?edit&user_id={$id}' class='btn btn-secondary'><i class='bi bi-pencil'></i>Actualizar</a> </td>";
                                     //Botón para eliminar
-                                    echo " <td  class='text-center'>  <a href='../php/eliminarCita.php?delete={$id}' class='btn btn-danger'> <i class='bi bi-trash'></i>Elimminar</a> </td>";
+                                    echo " <td  class='text-center'>  <a href='../php/eliminarCita.php?delete={$id}' class='btn btn-danger'> <i class='bi bi-trash'></i>Eliminar</a> </td>";
                                 echo "</tr>";
                             }
                         } else {
@@ -164,6 +164,14 @@
             </div>
         </div> <!--.row-->
     </div><!--.container-->
+
+    <?php
+        if(isset($_GET['msg']))
+        {
+            $message = "Cita agendada correctamente.";
+            echo $message;
+        }
+    ?>
 
     <script src="/JavaScript/Citas.js" defer></script>
 </body>
