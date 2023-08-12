@@ -104,90 +104,63 @@
                     </div>
                 </form>
             </div>
+
             <div class="col-md-6">
                 <h2 id="administra" class="mb-4">Administra tus Citas</h2>
                 <ul id="citas" class="list-group lista-citas"></ul>
 
-                <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "wapicr";
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="">ID Cita</th>
+                            <th scope="">Nombre completo</th>
+                            <th scope="">Teléfono</th>
+                            <th scope="">Fecha</th>
+                            <th scope="">Hora</th>
+                            <th scope="">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
 
-                $conn = new mysqli($servername, $username, $password, $dbname);
+                        require_once "../php/conexion.php";
 
-                if ($conn->connect_error) {
-                    die("Conexión fallida: " . $conn->connect_error);
-                }
+                        $sql = "SELECT * FROM cita";
+                        //$result = $conexion->query($sql);
+                        $conn = Conecta();
+                        $result = mysqli_query($conn,$sql);
 
-                $sql = "SELECT * FROM cita";
-                $result = $conn->query($sql);
+                        //if ($result->num_rows > 0) {
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                $id = $row['IDCita'];                
+                                $nombre = $row['nombre_completo'];        
+                                $telefono = $row['telefono'];         
+                                $fecha = $row['fecha'];
+                                $hora = $row['hora'];
+                                $descripcion = $row['descripcion'];
 
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo "ID Cita: " . $row["IDCita"] . " - Nombre completo: " . $row["nombre_completo"] . " - Teléfono: " . $row["telefono"] . " - Fecha: " . $row["fecha"] . " - Hora: " . $row["hora"] . " - Descripción: " . $row["descripcion"] ."<br>";
-                    }
-                } else {
-                    echo "0 results";
-                }
+                                echo "<tr>";
+                                    echo "<td> {$id} </th>";
+                                    echo "<td> {$nombre} </th>";
+                                    echo "<td> {$telefono} </th>";
+                                    echo "<td> {$fecha} </th>";
+                                    echo "<td> {$hora} </th>";
+                                    echo "<td> {$descripcion} </th>";
+                                    //Botón para editar
+                                    echo " <td class='text-center' > <a href='editarCita.php?edit&user_id={$id}' class='btn btn-secondary'><i class='bi bi-pencil'></i>Actualizar</a> </td>";
+                                    //Botón para eliminar
+                                    echo " <td  class='text-center'>  <a href='../php/eliminarCita.php?delete={$id}' class='btn btn-danger'> <i class='bi bi-trash'></i>Elimminar</a> </td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "0 results";
+                        }
 
-                $conn->close();
-                ?>
-
-                <h3>Actualizar o eliminar datos de cita</h3>
-                <form name="test" method="post" action="Citas.php">
-                    <p>ID Cita (para eliminar, solo llenar este campo):
-                        <input type="text" name="id" value="">
-                        <br />
-                        Nombre completo:
-                        <input type="text" name="nombre" value="">
-                        <br />
-                        Teléfono:
-                        <input type="tel" name="telefono" value="">
-                        <br />
-                        Fecha:
-                        <input type="date" name="fecha" value="">
-                        <br />
-                        Hora:
-                        <input type="time" name="hora" value="">
-                        <br />
-                        Descripción:
-                        <textarea id="descripcion" name="descripcion" class="form-control"></textarea>
-                        <br />
-                        <INPUT TYPE="submit" name="btnBorrar" value="Borrar cita"> <-->
-                            <INPUT TYPE="submit" name="btnActualizar" value="Actualizar cita">
-                    </p>
-                </form>
-
-                <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "wapicr";
-
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                if (isset($_POST['btnActualizar'])) {
-                    $Id = $_POST['id'];
-                    $Nombre = $_POST['nombre'];
-                    $Telefono = $_POST['telefono'];
-                    $Fecha = $_POST['fecha'];
-                    $Hora = $_POST['hora'];
-                    $Descripcion = $_POST['descripcion'];
-                    $query = "update cita set nombre_completo ='$Nombre', telefono = '$Telefono', fecha = '$Fecha', hora = '$Hora', descripcion = '$Descripcion' WHERE IDCita='$Id'";
-                    $result = mysqli_query($conn, $query);
-                    print("Datos modificados.");
-                    $conn->close();
-                }
-
-                if (isset($_POST['btnBorrar'])) {
-                    $Id = $_POST['id'];
-                    $query = "delete from cita where IDCita='$Id'";
-                    $result = mysqli_query($conn, $query);
-                    print("Datos borrados.");
-                    $conn->close();
-                }
-                ?>
+                        Desconecta($conn);
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div> <!--.row-->
     </div><!--.container-->
