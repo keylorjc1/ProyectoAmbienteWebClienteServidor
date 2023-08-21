@@ -53,12 +53,34 @@
   <header id="header" class="header">
 
   <?php
-        if(isset($_GET['msg']))
-        {
-            $message = "Artículo agregado correctamente al carrito.";
-            echo $message;
-        }
-  ?>
+if (isset($_GET['msg'])) {
+    $message = "Artículo agregado correctamente al carrito.";
+    echo '<div id="message" class="message">' . $message . '</div>';
+}
+?>
+<script>
+const messageElement = document.getElementById('message');
+
+messageElement.style.color = '#ec86b1'; 
+messageElement.style.fontSize = '20px'; 
+
+
+setTimeout(() => {
+    messageElement.style.display = 'none'; 
+}, 5000); 
+</script>
+
+const messageElement = document.getElementById('message');
+
+messageElement.style.color = '#ec86b1'; 
+messageElement.style.fontSize = '20px';
+
+setTimeout(() => {
+    messageElement.style.display = 'none'; 
+}, 5000); 
+</script>
+
+
     <!-- Tabla de Carrito -->
     <div class="container">
       <div>
