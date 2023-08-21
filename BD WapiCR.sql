@@ -109,3 +109,17 @@ CREATE TABLE Consulta (
   FechaConsulta DATE,
   FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
 );
+
+CREATE TABLE notificar (
+  idInput INT PRIMARY KEY AUTO_INCREMENT,
+  correo VARCHAR(250)
+);
+
+CREATE TABLE carrito (
+  idItem INT PRIMARY KEY AUTO_INCREMENT,
+  imgLink VARCHAR(100),
+  producto VARCHAR(50),
+  precio INT,
+  cantidad INT,
+  total INT GENERATED ALWAYS AS (precio*cantidad) STORED
+);
