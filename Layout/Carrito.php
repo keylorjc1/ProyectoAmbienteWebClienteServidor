@@ -58,7 +58,8 @@ if (isset($_GET['msg'])) {
     echo '<div id="message" class="message">' . $message . '</div>';
 }
 ?>
-<script>
+
+<!-- <script>
 const messageElement = document.getElementById('message');
 
 messageElement.style.color = '#ec86b1'; 
@@ -78,8 +79,7 @@ messageElement.style.fontSize = '20px';
 setTimeout(() => {
     messageElement.style.display = 'none'; 
 }, 5000); 
-</script>
-
+</script> -->
 
     <!-- Tabla de Carrito -->
     <div class="container">
@@ -91,12 +91,12 @@ setTimeout(() => {
                 <table id="lista-carrito" class="table">
                   <thead>
                     <tr>
-                      <th class="px-4 text-center">Imagen</th>
-                      <th class="px-4 pl-5">Producto</th>
-                      <th class="px-4 pl-50">Precio</th>
-                      <th class="px-4 pl-10">Cantidad</th>
-                      <th class="px-4 pl-10">Total</th>
-                      <th class="px-4 pl-10">Remover</th>
+                      <th class="px-4 pl-10 text-center">Imagen</th>
+                      <th class="px-4 pl-10 text-center">Producto</th>
+                      <th class="px-4 pl-10 text-center">Precio</th>
+                      <th class="px-4 pl-10 text-center">Cantidad</th>
+                      <th class="px-4 pl-10 text-center">Total</th>
+                      <th class="px-4 pl-10 text-center">Remover</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -105,7 +105,6 @@ setTimeout(() => {
                       require_once "../php/conexion.php";
 
                       $sql = "SELECT * FROM carrito";
-                      //$result = $conexion->query($sql);
                       $conn = Conecta();
                       $result = mysqli_query($conn,$sql);
 
@@ -120,13 +119,13 @@ setTimeout(() => {
                               $total = $row['total'];
 
                               echo "<tr>";
-                                  echo "<td>" ?> <img class="" src="<?php echo "{$img}" ?>" <?php "/> </th>";
-                                  echo "<td> {$producto} </th>";
-                                  echo "<td> $ {$precio} </th>";
-                                  echo "<td> {$cantidad} </th>";
-                                  echo "<td> $ {$total} </th>";
+                                  echo "<td>" ?> <img style="height:100px;width:100px;" src="<?php echo "{$img}" ?>" /> </td>
+                                  <td><center> <?php echo "{$producto} </center></td>";
+                                  echo "<td><center> $ {$precio} </center></td>";
+                                  echo "<td><center> {$cantidad} </center></td>";
+                                  echo "<td><center> $ {$total} </center></td>";
                                   //Botón para eliminar
-                                  echo " <td  class='text-center'>  <a href='../php/eliminarCarrito.php?delete={$id}' class='btn btn-danger'> <i class='bi bi-trash'></i>Eliminar</a> </td>";
+                                  echo "<td><center> <a href='../php/eliminarCarrito.php?delete={$id}' class='btn btn-danger'> <i class='bi bi-trash'></i>Eliminar</a> </center></td>";
                               echo "</tr>";
                           }
                       } else {

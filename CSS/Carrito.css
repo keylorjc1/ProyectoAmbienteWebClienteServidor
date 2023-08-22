@@ -344,3 +344,15 @@ li.submenu::marker {
     color: white;
     font-weight: bold;
 }
+
+#lista-carrito{
+  padding: 5%;
+  height:90%;
+  width:90%;
+}
+
+img #tablaImg{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
