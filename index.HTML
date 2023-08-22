@@ -51,6 +51,11 @@
         </svg>
         <span>Comprar</span>
       </a>
+      <?php
+if (isset($_SESSION["nombre_cliente"])) {
+  echo '<span class="bienvenido-msg">Bienvenido, ' . $_SESSION["nombre_cliente"] . '!</span>';
+}
+?>
     </div>
 
     <nav class="sidebar">
